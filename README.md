@@ -6,7 +6,7 @@ Welcome to my personal portfolio! Explore my projects, skills, and ways to conne
 
 ## 👨‍💻 About Me
 
-Hi, I’m **Dinesh Singh Dhami**, a Full Stack UX Designer and B.E in Computer Engineering. I am passionate about building interactive and user-friendly websites and applications.
+Hi, I’m **Dinesh Singh Dhami**, a B.E in Computer Engineering. I am passionate about building interactive and user-friendly websites and applications.
 
 * **Email:** [dineshdhamidn@gmail.com](mailto:dineshdhamidn@gmail.com)
 * **Phone:** +977-9866109958
