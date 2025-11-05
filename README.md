@@ -4,11 +4,11 @@ Welcome to my personal portfolio! Explore my projects, skills, and ways to conne
 
 ## 👨‍💻 About Me
 
-- 🌱 **I’m Currently pursuing a Bachelor's in Computer Engineering at NAST**
-- 💻 I’m currently Learning, building, and sharing tech — **Web Dev, | YouTube & Unstop**
+- 🌱 **I’m Currently pursuing a Bachelor's in Computer Engineering at National Academy of Science & Technology (NAST).**
 - 🎨 Learning Full-Stack Development with Django, Flask by building real-world practice projects.
+- 💻 I’m currently Learning, building, and sharing tech — **Web Dev, | YouTube & Unstop.**
+- 💬 Ask me about **C, C++, HTML, CSS, JavaScript, Python.**
 - 📚 Check out my projects on **[Project & work ](https://github.com/thecodingdhami?tab=repositories)**
-- 💬 Ask me about **C, C++, HTML, CSS, JavaScript, Python**
 - 📧 Reach me at **dineshsingh@nast.edu.np**
 
 ---
@@ -23,8 +23,8 @@ Welcome to my personal portfolio! Explore my projects, skills, and ways to conne
 
 * Showcase of projects with descriptions and links
 * Fully responsive design for mobile and desktop
-* Contact form for direct messages
 * Clean, modern, and user-friendly UI/UX
+* Contact form for direct messages
   
 ---
 
