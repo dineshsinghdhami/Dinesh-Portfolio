@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -137,3 +136,4 @@ button:last-of-type:hover {
         font-size: 0.8rem;
     }
 }
+
