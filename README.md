@@ -62,10 +62,11 @@ portfolio/
 Feel free to reach out via email or LinkedIn for collaboration or feedback!
 * **Phone:** +977-9866109958
 * **Email:** [dineshdhamidn@gmail.com](mailto:dineshdhamidn@gmail.com)
+* **Twitter:** [https://x.com/dineshdhami001](https://x.com/dineshdhami001)
 * **GitHub:** [github.com/dineshsinghdhami](https://github.com/dineshsinghdhami)
 * **LinkedIn:** [linkedin.com/in/dineshsinghdhami1](https://linkedin.com/in/dineshsinghdhami1)
 * **Facebook:** [https://www.facebook.com/dineshsinghdhamii](https://www.facebook.com/dineshsinghdhamii)
-* **Twitter:** [https://x.com/dineshdhami001](https://x.com/dineshdhami001)
+
 
 ---
 
