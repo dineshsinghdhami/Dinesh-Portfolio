@@ -70,4 +70,4 @@ Feel free to reach out via email or LinkedIn for collaboration or feedback!
 ---
 
 ### 🧑‍💼 Project Owner  
-**Dinesh Singh Dhami ❤️**  
+- **Dinesh Singh Dhami ❤️**  
