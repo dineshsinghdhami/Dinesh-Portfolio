@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinesh Singh Dhami | Portfolio</title>
+<link rel="icon" href="files/icon.png" type="image/png">
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #1e1e1e;
+        font-family: sans-serif;
+        color: #a0a0a0;
+        line-height: 1.6;
+    }
+    /* Desktop layout */
+    .main-container{
+        display: grid;
+        max-width: 1200px;
+        grid-template-columns: 350px 1fr;
+        gap: 50px;
+        padding-top: 40px;
+        margin: auto;
+    }
+    .sidebar{
+        height: 90vh;
+        background-color:#2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 16px;
+        padding: 40px;
+        position: sticky;
+        top: 40px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .main-content{
+        background-color:#2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    /* Profile section */
+    .profile{
+        text-align: center;
+    }
+    .profile img{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: 1px solid #3a3a3a;
+    }
+    .profile h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 20px;
+        color: #e0e0e0;
+    }
+    .profile p{
+        background-color: #1e1e1e;
+        padding: 5px 15px;
+        color: #FFBF00;
+        border: 1px solid #3a3a3a;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    /* Contact */
+    .contact{
+        margin-top: 30px;
+        border-top: 2px solid #3a3a3a;
+        padding-top:20px;
+    }
+    .label{
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #a0a0a0;
+    }
+    .value{
+        color: #e0e0e0;
+        text-decoration: none;
+    }
+    .email,.phone{
+        margin-bottom: 15px;
+    }
+
+    /* Social media */
+    .social{
+        margin-top: 30px;
+        border-top: 2px solid #3a3a3a;
+        padding-top:20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .social img{
+        height: 19px;
+        width: 18px;
+        filter: grayscale(1) invert(0.7);
+        transition: filter 0.3s ease;
+    }
+    .social img:hover{
+        filter: grayscale(0) invert(0);
+    }
+
+    /* Navigation */
+    #navigation{
+        border-bottom: 2px solid #3a3a3a;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    nav a{
+        text-decoration: none;
+        color: #a0a0a0;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    .active, nav a:hover{
+        color: #FFBF00;
+    }
+
+    /* Headings */
+    .heading{
+        color: #e0e0e0;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .line{
+        width: 60px;
+        height: 5px;
+        background-color: #FFBF00;
+        margin-bottom: 15px;
+    }
+
+    /* Skills */
+    .skills-grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+    }
+    .item{
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #3a3a3a;
+        background-color: #1e1e1e;
+        text-align: center;
+        margin-top: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .item img{
+        height: 48px;
+        width: 48px;
+        filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+        margin-bottom: 15px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .item h3{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .item:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    }
+    .item:hover img{
+        transform: scale(1.1);
+    }
+
+    /* Education */
+    #education{
+        margin-top: 30px;
+    }
+    .edtech{
+        position: relative;
+        margin-top: 20px;
+    }
+    .year{
+        font-size: 0.9rem;
+        color: #a0a0a0;
+        margin-bottom: 5px;
+    }
+    .degree{
+        color: #e0e0e0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .college{
+        font-style: italic;
+        color: #c0c0c0;
+        margin-bottom: 10px;
+    }
+    .work{
+        color: #c0c0c0;
+    }
+    .edfirst, .edsecond{
+        margin-bottom: 30px;
+        padding-left: 25px;
+        position: relative;
+    }
+    .goal{
+        height: 15px;
+        width: 15px;
+        border: 3px solid #FFBF00;
+        border-radius: 50%;
+        position: absolute;
+        top:5px;
+        left: 0px;
+        z-index: 5;
+    }
+    .liner{
+        position: absolute;
+        width: 2px;
+        top:0px;
+        bottom: 0px;
+        left: 5px;
+        border: 2px solid #3a3a3a;
+    }
+
+    /* Projects */
+    .project-container {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .project {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        border: 1px solid #3a3a3a;
+        overflow: hidden;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        max-width: 300px;
+        width: 100%;
+    }
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+    }
+    .project img {
+        height: 140px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .project .card {
+        padding: 10px 12px;
+    }
+    .project h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    .project p {
+        font-size: 0.85rem;
+    }
+    .card span{
+        background-color: rgba(255, 191, 0, 0.1);
+        color: #FFBF00;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-size: 0.75rem;
+        margin-right: 5px;
+    }
+    /* Live button */
+    .live-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 12px;
+        font-size: 0.8rem;
+        background-color: #FFBF00;
+        color: #1e1e1e;
+        font-weight: 500;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .live-btn:hover {
+        background-color: #e0a800;
+        transform: scale(1.05);
+    }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width:1200px) {
+        .main-container{
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+        .sidebar{
+            position: static;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        .skills-grid{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    @media screen and (max-width:900px) {
+        .skills-grid{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media screen and (max-width:600px) {
+        .skills-grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (max-width:400px) {
+        .skills-grid{
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (max-width:750px) {
+        .project-container{
+            grid-template-columns: 1fr;
+        }
+        #navigation nav {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .sidebar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+   .verified-badge {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="main-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile">
+            <img src="files/square-crop.jpg" alt="">
+            <h2>
+  Dinesh Singh Dhami
+  <span class="verified-badge">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <!-- Blue circular badge with subtle cut effect -->
+      <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+      <!-- White check mark -->
+      <path fill="none" stroke="#fff" stroke-width="2.5" d="M7 12l4 4 6-6"/>
+    </svg>
+  </span>
+</h2>
+
+
+            <p>Frontend Newbie</p>
+        </div>
+        <div class="contact">
+            <div class="email">
+                <h3 class="label">Email</h3>
+                <a href="mailto:dineshdhamidn@gmail.com" class="value">dineshdhamidn@gmail.com</a>
+            </div>
+            <div class="phone">
+                <h3 class="label">Phone</h3>
+                <a href="tel:+9779866109958" class="value">+977 9866109958</a>
+            </div>
+            <div class="location">
+                <h3 class="label">Location</h3>
+                <p class="value">Dhangadhi, Nepal</p>
+            </div>
+        </div>
+        <div class="social">
+            <a href="https://x.com/dineshdhami001" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X"></a>
+            <a href="https://github.com/dineshsinghdhami" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/dineshsinghdhami1/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="navigation">
+            <nav>
+                <a href="#about" class="active">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#project">Projects</a>
+            </nav>
+        </div>
+
+        <!-- About Me -->
+        <div id="about">
+            <h2 class="heading">About Me</h2>
+            <div class="line"></div>
+            <p>Welcome to my portfolio! I’m Dinesh Singh Dhami, a computer science student passionate about coding, problem-solving, and technology. I enjoy exploring web development and building projects that challenge me, and constantly learning to grow into a skilled and innovative developer.</p>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills">
+            <h2 class="heading">Skills</h2>
+            <div class="line"></div>
+            <div class="grid-container skills-grid">
+                <div class="item"><img src="https://simpleicons.org/icons/html5.svg" alt=""><h3>HTML</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/css.svg" alt=""><h3>CSS</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/javascript.svg" alt=""><h3>Javascript</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/python.svg" alt=""><h3>Python</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/flask.svg" alt=""><h3>Flask</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/c.svg" alt=""><h3>C</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/cplusplus.svg" alt=""><h3>C++</h3></div>
+                <div class="item"><img src="https://simpleicons.org/icons/git.svg" alt=""><h3>Git & Github</h3></div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div id="education">
+            <h2 class="heading">Education</h2>
+            <div class="line"></div>
+            <div class="edtech">
+                <div class="edfirst">
+                    <div class="year">2022-2026</div>
+                    <h3 class="degree">Bachelor of Computer Engineering</h3>
+                    <p class="college">National Academy of Science and Technology (NAST)</p>
+                    <p class="work">Currently pursuing a Bachelor’s degree in Computer Engineering at NAST Dhangadhi.</p>
+                    <div class="goal"></div>
+                </div>
+                <div class="edsecond">
+                    <div class="year">2020-2022</div>
+                    <h3 class="degree">NEB Level</h3>
+                    <p class="college">Aishwarya Vidya Niketan (AVN)</p>
+                    <p class="work">Studied science stream subjects including Physics, Chemistry, and Mathematics.</p>
+                    <div class="goal"></div>
+                </div>
+                <div class="liner"></div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div id="project">
+            <h2 class="heading">Projects</h2>
+            <div class="line"></div>
+            <div class="project-container">
+                <div class="project">
+                    <img src="files/quizzer.png" alt="Quizzer Project">
+                    <div class="card">
+                        <h3>Quizzer</h3>
+                        <p>A responsive quiz application built using HTML, CSS, JavaScript, Flask.</p>
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        <br>
+                        <a href="https://quizzerdemo.pythonanywhere.com/" target="_blank" class="live-btn">Live Preview</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
