@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinesh Dhami | Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+        :root {
+            --text-color: #222;
+            --main-color: #0066ff;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            color: var(--text-color);
+            background: #f5f5f5;
+        }
+
+       
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 14px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(4px);
+            border-bottom: 1px solid #ccc;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-weight: 600;
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        #navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        #navbar-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: .3s;
+        }
+
+        #navbar-links a:hover {
+            color: var(--main-color);
+        }
+
+        @media (max-width: 850px) {
+            #navbar-links {
+                display: none;
+            }
+            .navbar {
+                justify-content: center;
+            }
+            .navbar .logo {
+                font-size: 1.3rem;
+            }
+        }
+
+        .page {
+            padding-top: 90px;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .contact-main {
+            padding: 40px 20px;
+        }
+
+        .contact-full {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        @media(max-width: 850px) {
+            .contact-full {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-section .cs-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .cs-item .icon {
+            font-size: 18px;
+            background: var(--main-color);
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin-right: 12px;
+        }
+
+        .placeHolder {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .info {
+            font-size: 16px;
+        }
+
+        /* Form */
+        .contact-form h1 {
+            margin: 0 0 10px;
+        }
+
+        .border-line {
+            width: 60px;
+            height: 3px;
+            background: var(--main-color);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, textarea {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .contact-button {
+            background: var(--main-color);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .contact-button:hover {
+            opacity: .85;
+        }
+
+        .error, .email-error {
+            color: #d00000;
+            font-size: 14px;
+            display: none;
+            margin-bottom: 10px;
+        }
+
+        .contact-submit-after {
+            display: none;
+            background: #e7ffe7;
+            border: 1px solid #77cc77;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social a {
+            color: var(--text-color);
+            font-size: 20px;
+            margin: 0 8px;
+            transition: .3s;
+        }
+
+        .social a:hover {
+            color: var(--main-color);
+        }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+    box-sizing: border-box; 
+}
+
+#navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-links li {
+    flex-shrink: 0; 
+}
+
+#navbar-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .3s;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+#navbar-links a:hover {
+    color: var(--main-color);
+}
+
+@media (max-width: 850px) {
+    #navbar-links {
+        display: flex; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px;
+        right: 20px;
+        background: rgba(255,255,255,0.95);
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+}
+</style>
+</head>
+
+<body>
+ <nav class="navbar">
+    <a href="/" class="logo">Dinesh.</a>
+   <ul id="navbar-links">
+    <li>
+        <a href="https://dineshsinghdhami.com.np" target="_blank">
+            Personal Portfolio <i class="fa-solid fa-circle-check" style="color: #1DA1F2;"></i>
+        </a>
+    </li>
+</ul>
+</ul>
+</nav>
+
+<div class="page">
+        <main class="contact-main">
+            <div class="contact-full">
+                <div class="contact-section">
+                    <h1>Reach Me</h1>
+                    <div class="border-line"></div>
+
+                    <div class="cs-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">E-mail</div>
+                            <div class="info">dineshsingh@nast.edu.np</div>
+                        </div>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">Phone</div>
+                            <div class="info">+977 9866109958</div>
+                        </div>
+                    </div>
+
+                    <div class="cs-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">Address</div>
+                            <div class="info">Dhangadhi, Nepal</div> 
+                        </div>
+                    </div>
+                </div>
+
+                <section class="contact-form">
+                    <h1>Contact Me</h1>
+                    <div class="border-line"></div>
+
+                    <div class="contact-submit-after">Message sent successfully</div>
+
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="error">Please fill out all fields</div>
+
+                        <button type="submit" class="contact-button">Submit</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="social">
+                <a href="https://github.com/dineshsinghdhami" target="_blank"><i class="fa-brands fa-github"></i></a>  
+                <a href="https://www.linkedin.com/in/dineshsinghdhami1" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://dineshsinghdhami.com.np" target="_blank"><i class="fa-solid fa-globe"></i></a>         
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("TguWrW-H4_f4liVzH");
+
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+            document.querySelector('.error').style.display = 'block';
+            return;
+        } else {
+            document.querySelector('.error').style.display = 'none';
+        }
+
+        emailjs.sendForm("service_bwh4kzr", "template_fsjemzn", form)
+            .then(() => {
+                document.querySelector('.contact-submit-after').style.display = 'block';
+                form.reset();
+            })
+            .catch(() => {
+                alert("Failed to send message. Please try again later.");
+            });
+    });
+    
+</script>
+</body>
+</html>
