@@ -14,7 +14,7 @@ Welcome to my personal portfolio! Explore my projects, skills, and ways to conne
 ---
 ## 🖼 Portfolio Preview
 
-   <img src="./files/portfolio.png" width=auto /><br>
+   <img src="./files/New porfolio.png" width=auto /><br>
    ---
 
 ---
